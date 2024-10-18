@@ -25,7 +25,9 @@ function operaciones ()
     {
         // let respuesta=document.getElementById("resultado")
         // respuesta.innerHTML=`Ingresa solo numeros por favor`;
+        let respuesta=document.getElementById("resultado").innerHTML=`Ingresa solo numeros porfavor...`;
         alert("Ingresa solo numeros porfavor");
+        
     }
 }
 

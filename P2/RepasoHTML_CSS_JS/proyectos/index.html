@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu proyectos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/pexels-luis-gomes-166706-546819.jpg');
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+        }
+
+        header h1 {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ol li {
+            margin: 1rem 0;
+        }
+
+        ol li a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            ol li a {
+                font-size: 1.2rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            ol {
+                padding-left: 0;
+            }
+
+            ol li a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Menu de proyectos de FrontEnd</h1>
+        </header>
+        <main>
+            <section>
+                <ol>
+                    <li><a href="calculosJS/index.html" target="_blank">CalculosJS</a></li>
+                    <li><a href="menu_horizontal_css/index.html" target="_blank">Menu_horizontal_css</a></li>
+                    <li><a href="proyectoweb/index.html" target="_blank">Proyecto Web</a></li>
+                </ol>
+            </section>
+        </main>
+        <footer>
+            <p>...:: Creado por Cristian Vargas © ::..</p>
+        </footer>
+    </div>
+</body>
+</html>

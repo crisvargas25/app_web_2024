@@ -15,19 +15,19 @@
         </header>
         <div id="calculadora">
             <label for="n1">Número1: </label>
-            <input type="number" id="n1" autofocus><br>
+            <input class="caja" type="number" id="n1" autofocus><br>
             <label for="n2">Número 2: </label>
-            <input type="number" id="n2" autofocus>
+            <input class="caja" type="number" id="n2" autofocus>
             <br>
             <label for="tipo">Tipo de operación </label>
-            <select id="tipo"><br>
+            <select class="caja" id="tipo"><br>
                 <option value="+" selected>Suma</option>
                 <option value="-" selected>Resta</option>
                 <option value="*">Multiplicación</option>
                 <option value="/">División</option>
             </select>
             <br><br>
-            <input type="button" value="Calcular" onclick="operaciones()">
+            <input id="boton" type="button" value="Calcular" onclick="operaciones()">
             <div id="resultado"></div>
 
     </div>

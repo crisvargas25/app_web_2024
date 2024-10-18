@@ -20,10 +20,11 @@ h1{
     padding-top: 4VW;
     padding-bottom: 4vw;
     text-align:center;
-    color:black;
+    color:white;
     font-size: 3.1vw;
     font-weight: normal;
     font-style: italic;
+    background-color:rgba(15, 15, 15, 0.384);
 }
 
 #calculadora{
@@ -31,4 +32,37 @@ h1{
     text-align: center;
     color: black;
     font-size:2vw
+}
+
+#caja{
+    font-size: 2vw;
+    color: black;
+    font-weight: bolder;
+    width: 10%;
+}
+
+#tipo{
+    width: auto;
+}
+
+#boton{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding: 2vw;
+    font-size: 1.5vw;
+    background-color: aqua;
+    border-radius: 10%;
+    border: 1px solid aqua;
+    color: white;
+}
+
+#boton:hover{
+    background-color: black;
+    border: 1px solid black;
+}
+
+#boton:active{
+    background-color: green;
+    border: 1px solid green;
+    color: black
 }
