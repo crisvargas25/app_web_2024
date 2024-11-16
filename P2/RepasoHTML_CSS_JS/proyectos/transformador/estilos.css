@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(img/pexels-pixabay-106152.jpg);
+    background-size: cover;
+    height: 100vmax;
+}
+
+#contenedor {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
+h1 {
+    padding-top: 4VW;
+    padding-bottom: 4vw;
+    text-align: center;
+    color: white;
+    font-size: 3.1vw;
+    font-weight: normal;
+    font-style: italic;
+    background-color: rgba(15, 15, 15, 0.384);
+}
+
+#calculadora {
+    margin: 2vw;
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+}
+
+.caja {
+    font-size: 2vw;
+    color: black;
+    width: 30%;
+}
+
+#boton {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    background-color: green;
+    border-radius: 10%;
+    border: 1px solid green;
+    color: white;
+}
+
+#boton:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+
+#boton:active {
+    background-color: green;
+    border: 1px solid green;
+    color: black;
+}
+
+#resultado{
+    padding-top: 1vw;
+    background-color: rgba(15, 15, 15, 0.959);
+    color: white;
+}
+
+#imagen-moneda {
+    margin-top: 1vw;
+    text-align: center;
+}
+
+#imagen-moneda img {
+    width: 200px;
+    height: auto;
+    margin-top: 1vw;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Dinero</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="estilos.css"> 
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <h1>.: Calculadora de Dinero :.</h1>
+            <hr>
+        </header>
+        <div id="calculadora">
+            <label for="cantidad">Cantidad: </label>
+            <input class="caja" type="number" id="cantidad" autofocus><br><br>
+
+            <label for="moneda1">Moneda Origen: </label>
+            <select class="caja" id="moneda1">
+                <option value="usd">Dólares</option>
+                <option value="mxn">Pesos Mexicanos</option>
+                <option value="eur">Euros</option>
+            </select><br><br>
+
+            <label for="moneda2">Moneda Destino: </label>
+            <select class="caja" id="moneda2">
+                <option value="usd">Dólares</option>
+                <option value="mxn">Pesos Mexicanos</option>
+                <option value="eur">Euros</option>
+            </select><br><br>
+
+            <input id="boton" type="button" value="Convertir" onclick="convertir()">
+            <div id="resultado"></div>
+            <div id="imagen-moneda"></div>
+        </div>
+    </div>
+</body>
+</html>
