@@ -1,12 +1,14 @@
-# urls de la aplicacion mainapp
-
-from django.urls import path
-from mainapp import views
+from django.urls import path, include
+from .views import *
 
 urlpatterns = [
-    path('', views.index,name='inicio'),
-    path('inicio/', views.index,name='inicio'),
-    path('acercade/',views.about,name='acercade'),
-    path('mision/',views.mision, name='mision'),
-    path('vision/', views.vision, name='vision'),
-    ]
+    path('', index, name='index'),
+    path('inicio/', index, name='index'),
+    path('acerca/', about, name='about'),
+    path('mision/', mision, name='mision'),
+    path('vision/', vision, name='vision'),
+    path('login/', login_user, name='login'),
+    path('registro/', registro, name='registro'),
+    path('logout/', logout_user, name='logout'),
+    path('art/', include('articulos.urls')),
+]

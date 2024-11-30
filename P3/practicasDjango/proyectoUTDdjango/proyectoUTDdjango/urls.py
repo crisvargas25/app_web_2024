@@ -1,5 +1,5 @@
 """
-URL configuration for proyectoUTDdjango project.
+URL configuration for proyectoUTD project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -14,15 +14,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
-from django.conf.urls import handler404
 from django.contrib import admin
 from django.urls import path, include
-from mainapp import views
-
-handler404 = 'mainapp.views.page404'
+from .views import *
+from django.conf import settings
 
 urlpatterns = [
     path('', include('mainapp.urls')),
+    path('', include('articulos.urls')),
     path('admin/', admin.site.urls),
     ]
+#ruta imagenes
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'mainapp.views.error_404_view'

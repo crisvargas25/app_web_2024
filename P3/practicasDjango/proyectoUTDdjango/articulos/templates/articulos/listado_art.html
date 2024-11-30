@@ -1,0 +1,39 @@
+{% extends "layouts/layouts.html" %}
+
+{% block title %}
+{{title}}
+{% endblock title %}
+
+{% block content %}
+    <h1 class="title">{{title}}</h1>
+    <hr>
+    <h1 align="center">Listado</h1> <hr>
+
+    {% for i in article %}
+        <article class="article-item">
+            {% if i.image != 'null' and i.image.url|length >= 1 %}
+                <div>
+                    <img width="100px" height="100px" src="{{i.image.url}}" />
+                </div>
+            {% endif %}
+
+            <div class="data">
+                <h2>{{i.title}}</h2>
+                <p>Descripción: {{i.content}}</p>
+                <p>Categorias:
+                {% for category in i.categories.all %}
+                    {{category}}
+                {% endfor %}
+                </p>
+                <span class="date">
+                    {{i.user.first_name}} {{i.user.last_name}}
+                    <br/>
+                    {{i.created_at}}
+                </span>
+                <hr>
+            </div>
+            <div class="clearfix"></div>
+        </article>
+    {% endfor %}
+
+{% endblock %}

@@ -1,36 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/estilos.css" %}" type="text/css">  
     <title>
         {% block title %}
         {% comment %} Aqui va el blocke del titulo {% endcomment %}
         {% endblock title %}
-
-        
+ 
     </title>
     <style>
         
     </style>
 </head>
 <body>
-    <h1>Estoy en la pagina Inicio</h1>
+    <header>
+        <div id="logotipo">
+            <img src="{% static "img/logodjango.png" %}" alt="Imagen Django" title="Django">
+            <h1>Django Proyecto Web</h1>
+        </div>
+    </header>
     <nav>
         <ul>
-            <li><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li><a href="{% url 'acercade' %}">Acerca de Nosotros</a></li>
-            <li><a href="{% url 'mision' %}">Misión</a></li>
-            <li><a href="{% url 'vision' %}">Visión</a></li>
+            <li><a href="{% url "inicio" %}" >Inicio</a></li>
+            <li><a href="{% url "acercade" %}">Acerca de</a></li>
+            <li><a href="{% url "mision" %}">Mision</a></li>
+            <li><a href="{% url "vision" %}">Vision</a></li>
+            <li><a href="{% url "registro" %}">Registro</a></li>
+            <li><a href="{% url "login" %}">Login</a></li>
+
         </ul>
     </nav>
-
-    <h2>Bienvendido a mi pagina con Django</h2>
-    {% block content %}
-    {% comment %} Aqui se maqueta el contenido del bloque content {% endcomment %}
-    
-    {% endblock content %}
-
-    
+    <section id="content">
+        <div class="box">
+            {% comment %} <h1>Inicio</h1>
+            <hr> {% endcomment %}
+            <p>{% block content %}{% endblock content %}</p>
+        </div>
+    </section>
+    <footer>
+        <p>Django con Dagonline &copy; 2024 | Visitado el: 01/10/24</p>
+    </footer>
 </body>
 </html>

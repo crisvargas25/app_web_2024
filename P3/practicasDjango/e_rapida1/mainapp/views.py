@@ -28,3 +28,17 @@ def vision(request):
         'content':'La vision de el examen'
     })
 
+def page404(request, exception):
+    return render(request, 'mainapp/error404.html')
+
+def registro(request):
+        return render(request, 'users/registro.html', {
+            'title': 'Registro de Usuarios',
+            'content': 'registrate ahora'
+        })
+
+def login_user(request):
+    return render(request, 'users/login.html',{
+        'title':'Login',
+        'content':'Inicia sesion ahora'
+    })
